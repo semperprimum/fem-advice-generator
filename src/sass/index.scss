@@ -1,0 +1,69 @@
+@use "./components/variables" as *;
+@use "./components/utils" as *;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+body {
+  font-family: $ff-primary;
+  font-weight: $fw-regular;
+  color: $clr-secondary;
+  font-size: $fs-primary;
+
+  background-color: $clr-neutral-800;
+}
+
+main {
+  margin: 7.5rem 1rem 3rem;
+  text-align: center;
+}
+
+.advice-number {
+  font-size: 0.75rem;
+  letter-spacing: 2.8px;
+  color: $clr-primary;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.advice-text {
+  font-size: 1.5rem;
+  line-height: 1.4;
+
+  &::before {
+    content: open-quote;
+  }
+  &::after {
+    content: close-quote;
+  }
+}
+
+.divider {
+  margin-top: 1.35rem;
+  &__img {
+    margin-inline: auto;
+  }
+}
+
+@media only screen and (min-width: 30em) {
+  body {
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+  main {
+    margin: -1.25rem 1rem 0;
+  }
+
+  .advice-number {
+    font-size: 0.9rem;
+    letter-spacing: 3.25px;
+    margin-bottom: 1.375rem;
+  }
+  .advice-text {
+    font-size: $fs-primary;
+    line-height: 1.35;
+    letter-spacing: -0.35px;
+  }
+  .divider {
+    margin-top: 2.5rem;
+  }
+}

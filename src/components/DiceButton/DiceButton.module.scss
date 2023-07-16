@@ -1,0 +1,28 @@
+@use "../../sass/components/variables" as *;
+@use "../../sass/components/utils" as *;
+
+.btn {
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+  aspect-ratio: 1;
+  border: none;
+  background-color: $clr-primary;
+  border-radius: 50%;
+  padding: 1.25rem;
+  transform: translateY(50%);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 30em) {
+  .btn {
+    margin-top: 0.6rem;
+
+    transition: box-shadow 200ms ease;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 0 2.5rem 0.25rem hslac($clr-primary, 0.75);
+    }
+  }
+}

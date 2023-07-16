@@ -1,0 +1,15 @@
+@use "../../sass/components/variables" as *;
+
+.card {
+  background-color: $clr-neutral-700;
+  border-radius: 0.625rem;
+  padding: 2.5rem 1rem 0;
+}
+
+@media only screen and (min-width: 30em) {
+  .card {
+    max-width: 33.75rem;
+    padding: 2.85rem 2.75rem 0;
+    border-radius: 0.85rem;
+  }
+}
